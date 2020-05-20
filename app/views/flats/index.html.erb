@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>All our Flats(<%= @flats.count %>)</h1>
+    <div class="container d-flex">
+      <% @flats.each do |flat| %>
+          <div lass="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title"><%= flat.name %></h5>
+              <p class="card-text"><%= flat.address %></p>
+              <div class="row">
+                <i class="fas fa-user-friends pr-3 pl-3"> <%= flat.number_of_guests %></i>
+                <i class="fas fa-euro-sign"><%= flat.price_per_night %></i>
+              </div>
+            </div>
+          </div>
+      <% end %>
+    </div>
+</div>
+
